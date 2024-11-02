@@ -1,0 +1,654 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Container styling */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #cfe0ff, #6e7178); /* Soft gradient background */
+}
+
+/* Form wrapper styling */
+.login-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title styling */
+.login-title {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Input group styling */
+.login-input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-label {
+  display: block;
+  font-size: 0.875rem; /* Small text */
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #444547;
+  box-shadow: 0px 0px 0px 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #4e5053;
+  border: none;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #5a5c60;
+}
+
+.login-button:disabled {
+  background-color: #9d9fa2;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+/* Link styling */
+.login-link {
+  color: #4a4c4e;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #4c4d4f;
+}
+/* Dashboard container styling */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f7fafc; /* Light gray background */
+  min-height: 100vh;
+}
+
+/* Dashboard title */
+.dashboard-title {
+  font-size: 2.5rem; /* 4xl */
+  font-weight: 800;
+  color: #4b4c4e; /* Blue color */
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation bar styling */
+.dashboard-nav {
+  margin-bottom: 2rem;
+}
+
+.dashboard-nav ul {
+  display: flex;
+  gap: 2rem; /* Space between nav items */
+}
+
+.dashboard-nav li {
+  cursor: pointer;
+  font-size: 1rem; /* Base font size */
+  color: #464647; /* Dark gray for inactive state */
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.25rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.dashboard-nav li:hover {
+  text-decoration: underline;
+}
+
+.dashboard-nav .active {
+  font-weight: 600;
+  color: #535456; /* Active blue color */
+  border-color: #4d4f51;
+}
+
+/* Section container styling */
+.dashboard-section {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: #ffffff; /* White background for sections */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 2rem;
+}
+
+/* Section title */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #525456; /* Light blue */
+  margin-bottom: 1rem;
+}
+
+/* Label and input styling */
+.dashboard-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563; /* Medium gray */
+}
+
+.dashboard-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db; /* Light border */
+  border-radius: 0.375rem;
+  transition: border-color 0.3s ease;
+}
+
+.dashboard-input:focus {
+  outline: none;
+  border-color: #626469;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Button styling */
+.dashboard-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #4a4b4e;
+  border: none;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.dashboard-button:hover {
+  background-color: #57595d;
+}
+
+/* List styling */
+.dashboard-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.dashboard-list-item {
+  margin-bottom: 0.5rem;
+}
+
+.appointment-item {
+  font-weight: 600;
+  color: #374151;
+}
+
+.appointment-notes {
+  font-style: italic;
+  color: #9ca3af; /* Lighter gray for notes */
+}
+/* Main container styling */
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7fafc; /* Light gray */
+}
+
+/* Card styling */
+.register-card {
+  width: 100%;
+  max-width: 28rem; /* Max width for form */
+  padding: 2rem;
+  background-color: #ffffff; /* White background */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between elements */
+}
+
+/* Title styling */
+.register-title {
+  font-size: 1.875rem; /* 2xl */
+  font-weight: 700;
+  text-align: center;
+  color: #374151; /* Dark gray */
+}
+
+/* Label and input styling */
+.register-label {
+  display: block;
+  font-size: 0.875rem; /* Small font */
+  font-weight: 500;
+  color: #4b5563; /* Medium gray */
+}
+
+.register-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 0.375rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-input:focus {
+  outline: none;
+  border-color: #47494b; /* Focus ring color */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Light blue focus shadow */
+}
+
+.register-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Select box styling */
+.register-select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-select:focus {
+  outline: none;
+  border-color: #45474a;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.register-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button styling */
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff; /* White text */
+  background-color: #424346; /* Primary blue */
+  border: none;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #56585d;
+}
+
+.register-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Link and text styling */
+.register-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #4f5154; /* Blue link color */
+  text-decoration: underline;
+}
+
+.register-text {
+  font-size: 0.875rem;
+  color: #6b7280; /* Light gray text */
+  text-align: center;
+}
+/* Navbar container */
+.navbar {
+  background-color: #616264; /* Blue background */
+  padding: 1rem;
+}
+
+/* Navbar inner container */
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styling */
+.navbar-logo {
+  font-size: 1.5rem; /* Large font size for brand */
+  font-weight: bold;
+  color: #ffffff; /* White text */
+}
+
+/* List items styling */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Link styling */
+.navbar-link {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #d1e6ff; /* Light blue on hover */
+}
+
+/* Profile initials circle */
+.profile-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #9ca3af; /* Gray circle */
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.875rem; /* Small font */
+}
+
+/* Username display styling */
+.navbar-username {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Logout button */
+.logout-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.logout-button:hover {
+  color: #d1e6ff;
+}
+/* Dashboard container */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem; /* Adjust padding for spacing */
+  background-color: #f3f4f6; /* Light gray background */
+  min-height: 100vh; /* Full height */
+}
+
+/* Header styling */
+.dashboard-header {
+  font-size: 2rem; /* Large font size */
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Spacing below the header */
+}
+
+/* Details card styling */
+.details-card {
+  width: 100%;
+  max-width: 28rem; /* Restrict card width */
+  padding: 1.5rem; /* Inner padding */
+  background-color: #ffffff; /* White background for card */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 1rem; /* Margin below the card */
+}
+
+/* Subheader styling */
+.details-card h2 {
+  font-size: 1.25rem; /* Slightly smaller than header */
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space below the subheader */
+}
+
+/* Input and text area styling */
+label {
+  display: block; /* Make label block for spacing */
+  margin-bottom: 0.5rem; /* Space below label */
+}
+
+/* Input styles */
+input,
+textarea,
+select {
+  width: 100%; /* Full width */
+  padding: 0.5rem 1rem; /* Padding inside inputs */
+  border: 1px solid #d1d5db; /* Light border */
+  border-radius: 0.375rem; /* Rounded corners */
+  transition: border-color 0.2s ease; /* Smooth transition */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none; /* Remove default outline */
+  border-color: #4f5153; /* Change border color on focus */
+  box-shadow: 0 0 0 2px rgba(135, 142, 154, 0.5); /* Add shadow on focus */
+}
+
+/* Button styling */
+button {
+  width: 100%; /* Full width */
+  padding: 0.5rem 1rem; /* Padding for buttons */
+  font-weight: 600; /* Bold font */
+  border-radius: 0.375rem; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.2s ease; /* Smooth transition for hover */
+}
+
+/* Primary button */
+.button-primary {
+  background-color: #404245; /* Blue background */
+  color: #ffffff; /* White text */
+}
+
+.button-primary:hover {
+  background-color: #4a4b4f; /* Darker blue on hover */
+}
+
+/* Secondary button */
+.button-secondary {
+  background-color: #6b7280; /* Gray background */
+  color: #ffffff; /* White text */
+}
+
+.button-secondary:hover {
+  background-color: #4b5563; /* Darker gray on hover */
+}
+
+/* Appointment form styling */
+.appointment-form {
+  width: 100%;
+  max-width: 28rem; /* Restrict form width */
+  padding: 1.5rem; /* Inner padding */
+  background-color: #ffffff; /* White background for form */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 1rem; /* Margin below the form */
+}
+
+/* Form header */
+.appointment-form h2 {
+  font-size: 1.25rem; /* Slightly smaller than header */
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space below the subheader */
+}
+/* Dashboard container */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem; /* Inner padding */
+  background-color: #f3f4f6; /* Light gray background */
+  min-height: 100vh; /* Full height */
+}
+
+/* Dashboard title */
+.dashboard-title {
+  font-size: 2.25rem; /* Extra large title */
+  font-weight: 800; /* Bold font */
+  color: #4a4c51; /* Blue color */
+  margin-bottom: 1.5rem; /* Space below title */
+}
+
+/* Error message styling */
+.error-message {
+  margin-bottom: 1rem; /* Spacing below the error message */
+  color: #dc2626; /* Red color for errors */
+}
+
+/* Navigation styling */
+.nav {
+  margin-bottom: 2rem; /* Spacing below the nav */
+}
+
+/* Navigation list styling */
+.nav ul {
+  display: flex; /* Flexbox for horizontal layout */
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+/* Navigation item styling */
+.nav li {
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 1.5rem; /* Horizontal spacing */
+  color: #4b5563; /* Default gray color for text */
+  transition: color 0.2s ease, border-bottom 0.2s ease; /* Smooth transition */
+}
+
+/* Active navigation item */
+.nav li.active {
+  font-weight: 600; /* Bold font for active item */
+  color: #595c60; /* Blue color for active item */
+  border-bottom: 2px solid #585a5e; /* Bottom border for active item */
+}
+
+/* Hover effect for navigation items */
+.nav li:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+/* Dashboard.css */
+
+/* General Styles */
+body {
+  background-color: #f8fafc; /* Light gray background */
+  font-family: 'Arial', sans-serif; /* Consistent font family */
+}
+
+/* Header */
+h1 {
+  text-align: center;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: center; /* Center navigation items */
+}
+
+nav li {
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 10px 15px; /* Spacing around navigation items */
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+nav li:hover {
+  color: #646b6b; /* Change color on hover */
+}
+
+/* Dashboard Cards */
+.card {
+  background-color: white; /* White background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 20px 0; /* Spacing between cards */
+  padding: 20px; /* Inner padding for cards */
+}
+
+/* Input Fields */
+input[type="text"], input[type="datetime-local"] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Inner padding */
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.2s ease-in-out; /* Transition for focus state */
+}
+
+input[type="text"]:focus, input[type="datetime-local"]:focus {
+  border-color: #515353; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Buttons */
+button {
+  background-color: #535857; /* Teal background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 15px; /* Spacing around button text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #525958; /* Darker teal on hover */
+}
+
+/* Error Messages */
+.error {
+  color: red; /* Red text for errors */
+  font-weight: bold; /* Bold font */
+  margin-bottom: 15px; /* Spacing below error message */
+}
